@@ -1,0 +1,138 @@
+/* Background and base styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+    background: url('/static/images/logo.png') no-repeat center center fixed;
+    background-size: contain;
+}
+
+/* Overlay for readability */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.dark-mode .overlay {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 2;
+}
+
+/* Main content container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding-top: 80px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Form styling */
+form {
+    margin: 20px 0;
+}
+
+input[type="url"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 16px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Recent URLs box layout */
+.recent-box {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.url-card {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px 20px;
+    width: 280px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+.dark-mode .url-card {
+    background-color: #1e1e1e;
+    border-color: #333;
+}
+
+.url-card p {
+    margin: 0;
+    font-size: 15px;
+    word-break: break-word;
+}
+
+.url-card a {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.dark-mode .url-card a {
+    color: #66b2ff;
+}
+
+/* Dark theme overall */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
